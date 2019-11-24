@@ -44,9 +44,10 @@
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
                     <a class="navbar-brand" href="index.html">MaréLuna</a>
                 </div>
                 <!-- End Header Navigation -->
@@ -58,7 +59,7 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Loja</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop-detail.html">Nossos Produtos</a></li>
+                                <li><a href="shop-detail.html">Nossos Produtos</a></li>
                                 <li><a href="cart.html">Carrinho</a></li>
                                 <li><a href="checkout.html">Comprar</a></li>
                             </ul>
@@ -71,7 +72,7 @@
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
-    
+
     <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">
@@ -92,157 +93,66 @@
     <div class="cart-box-main">
         <div class="container">
             <div class="row new-account-login">
+
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="title-left">
                         <h3>Login da Conta</h3>
                     </div>
-                    <h5><a data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Clique Aqui para Fazer o Login</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formLogin">
+                    <form name="formLogin" class="mt-3 review-form-box" id="formLogin">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="InputEmail" class="mb-0">Email</label>
-                                <input type="email" class="form-control" required id="InputEmail" placeholder="Digite seu Email"> </div>
+                                <input type="email" class="form-control" name="email" id="InputEmail"
+                                    placeholder="Digite seu Email"> </div>
                             <div class="form-group col-md-6">
                                 <label for="InputPassword" class="mb-0">Senha</label>
-                                <input type="password" class="form-control" required id="InputPassword" placeholder="Senha"> </div>
+                                <input type="password" class="form-control" name="password" id="InputPassword"
+                                    placeholder="Senha"> </div>
                         </div>
-                        <button type="submit" class="btn hvr-hover">Login</button>
+                        <button type="submit" class="btn hvr-hover" onclick="validarLogin()">Login</button>
                     </form>
                 </div>
+
                 <div class="col-sm-6 col-lg-6 mb-3">
-                    <div class="title-left">
-                        <h3>Crie uma Nova Conta</h3>
-                    </div>
-                    <h5><a data-toggle="collapse" href="#formRegister" role="button" aria-expanded="false">Clique aqui para Registrar</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formRegister">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="InputName" class="mb-0">Primeiro Nome</label>
-                                <input type="text" class="form-control" id="InputName" required placeholder="Primeiro Nome"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputLastname" class="mb-0">Sobrenome</label>
-                                <input type="text" class="form-control" id="InputLastname" required placeholder="Sobrenome"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputEmail1" class="mb-0">Endereço de Email</label>
-                                <input type="email" class="form-control" required id="InputEmail1" placeholder="Endereço de Email"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputPassword1" class="mb-0">Senha</label>
-                                <input type="password" class="form-control" id="InputPassword1" required placeholder="Senha"> </div>
-                        </div>
-                        <button type="submit" class="btn hvr-hover">Cadastrar</button>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-6 mb-3">
-                    <div class="checkout-address">
                         <div class="title-left">
-                            <h3>Endereço de Cobrança</h3>
+                            <h3>Crie uma Nova Conta</h3>
                         </div>
-                        <form class="needs-validation" novalidate>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="firstName">Primeiro Nome *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="lastName">Sobrenome *</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="username">Nome de Usuário *</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email">Endereço de Email *</label>
-                                <input type="email" class="form-control" id="email" placeholder="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="address">Endereço *</label>
-                                <input type="text" class="form-control" id="address" placeholder="" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="address2">Endereço Opcional *</label>
-                                <input type="text" class="form-control" id="address2" placeholder=""> </div>
-                            <div class="row">
-                                <div class="col-md-5 mb-3">
-                                    <label for="country">País *</label>
-                                    <select class="form-control wide w-100" id="country">
-									<option value="Escolha..." data-display="Select">Escolha...</option>
-									<option value="Brasil">Brasil</option>
-								</select>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="state">Estado *</label>
-                                    <select class="form-control wide w-100" id="state">
-									<option data-display="Select">Escolha...</option>
-									<option>São Paulo</option>
-								</select>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="cep">CEP *</label>
-                                    <input type="text" class="form-control" id="cep" placeholder="" required>
+    
+                        <form name="formCadastro" class="mt-3  review-form-box" id="formRegister">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="InputName" class="mb-0">Primeiro Nome</label>
+                                    <input name="PrimeiroNome" type="text" class="form-control" id="InputName" required
+                                        placeholder="Primeiro Nome"> </div>
+                                <div class="form-group col-md-6">
+                                    <label for="InputLastname" class="mb-0">Sobrenome</label>
+                                    <input name="Sobrenome" type="text" class="form-control" id="InputLastname" required
+                                        placeholder="Sobrenome"> </div>
+                                <div class="form-group col-md-6">
+                                    <label for="InputEmail1" class="mb-0">Endereço de Email</label>
+                                    <input name="email" type="email" class="form-control" required id="InputEmail1"
+                                        placeholder="Endereço de Email"> </div>
+                                <div class="form-group col-md-6">
+                                    <label for="InputPassword1" class="mb-0">Senha</label>
+                                    <input name="senha" type="password" class="form-control" id="InputPassword1" required
+                                        placeholder="Senha"> </div>
+                                <div class="form-group col-md-6">
+                                    <label for="InputPassword1" class="mb-0">Confirme sua Senha</label>
+                                    <input name="Confirmsenha" type="password" class="form-control" id="InputPassword1"
+                                        required placeholder="COnfirme sua Senha"> </div>
+    
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn hvr-hover mt-3"
+                                        onclick="validarCadastro()">Cadastrar</button>
                                 </div>
                             </div>
-                            <hr class="mb-4">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" checked class="custom-control-input" id="same-address">
-                                <label class="custom-control-label" for="same-address">Endereço de Entrega é o mesmo Endereço de cobrança</label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" checked class="custom-control-input" id="save-info">
-                                <label class="custom-control-label" for="save-info">Salve minhas informações para as próximas compras</label>
-                            </div>
-                            <hr class="mb-4">
-                            <div class="title"> <span>Pagamento</span> </div>
-                            <div class="d-block my-3">
-                                <div class="custom-control custom-radio">
-                                    <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                    <label class="custom-control-label" for="credit">Cartão de Crédito</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="debit">Cartão de Débito</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="cc-name">Nome no Cartão</label>
-                                    <input type="text" class="form-control" id="cc-name" placeholder="" required> <small class="text-muted">Nome Completo Exibido no Cartão</small>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="cc-number">Número do Cartão</label>
-                                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">Vencimento</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">CVV</label>
-                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="payment-icon">
-                                        <ul>
-                                            <li><img class="img-fluid" src="images/payment-icon/1.png" alt=""></li>
-                                            <li><img class="img-fluid" src="images/payment-icon/2.png" alt=""></li>
-                                            <li><img class="img-fluid" src="images/payment-icon/3.png" alt=""></li>
-                                            <li><img class="img-fluid" src="images/payment-icon/5.png" alt=""></li>
-                                            <li><img class="img-fluid" src="images/payment-icon/7.png" alt=""></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr class="mb-1"> </form>
+    
+                        </form>
                     </div>
-                </div>
-                <div class="col-sm-6 col-lg-6 mb-3">
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="col-sm-12 col-lg-12 mb-3">
                     <div class="row">
                         <div class="col-md-12 col-lg-12">
                             <div class="shipping-method-box">
@@ -251,230 +161,252 @@
                                 </div>
                                 <div class="mb-4">
                                     <div class="custom-control custom-radio">
-                                        <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
-                                        <label class="custom-control-label" for="shippingOption1">Correios</label> <span class="float-right font-weight-bold">De Graça</span> </div>
+                                        <input id="shippingOption1" name="shipping-option" class="custom-control-input"
+                                            checked="checked" type="radio">
+                                        <label class="custom-control-label" for="shippingOption1">Correios</label> <span
+                                            class="float-right font-weight-bold">De Graça</span> </div>
                                     <div class="ml-4 mb-2 small">(3-7 dias úteis)</div>
                                     <div class="custom-control custom-radio">
-                                        <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                        <label class="custom-control-label" for="shippingOption2">Sedex</label> <span class="float-right font-weight-bold">R$10.00</span> </div>
+                                        <input id="shippingOption2" name="shipping-option" class="custom-control-input"
+                                            type="radio">
+                                        <label class="custom-control-label" for="shippingOption2">Sedex</label> <span
+                                            class="float-right font-weight-bold">R$10.00</span> </div>
                                     <div class="ml-4 mb-2 small">(2-4 dias úteis)</div>
-                                   
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-lg-12">
-                            <div class="odr-box">
-                                <div class="title-left">
-                                    <h3>Carrinho</h3>
-                                </div>
-                                <div class="rounded p-2 bg-light">
-                                    <div class="media mb-2 border-bottom">
-                                        <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
-                                            <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span> Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="media mb-2 border-bottom">
-                                        <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
-                                            <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span> Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="media mb-2 border-bottom">
-                                        <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
-                                            <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span> Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-12 col-lg-12">
-                            <div class="order-box">
-                                <div class="title-left">
-                                    <h3>Seu Pedido</h3>
+                            <div class="col-md-12 col-lg-12">
+                                <div class="odr-box">
+                                    <div class="title-left">
+                                        <h3>Carrinho</h3>
+                                    </div>
+                                    <div class="rounded p-2 bg-light">
+                                        <div class="media mb-2 border-bottom">
+                                            <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
+                                                <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span>
+                                                    Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="media mb-2 border-bottom">
+                                            <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
+                                                <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span>
+                                                    Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="media mb-2 border-bottom">
+                                            <div class="media-body"> <a href="detail.html"> Mandalas em MDF</a>
+                                                <div class="small text-muted">Preço: R$80.00 <span class="mx-2">|</span>
+                                                    Qtd: 1 <span class="mx-2">|</span> Subtotal: R$80.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="d-flex">
-                                    <div class="font-weight-bold">Produto</div>
-                                    <div class="ml-auto font-weight-bold">Total</div>
+                            </div>
+                            <div class="col-md-12 col-lg-12">
+                                <div class="order-box">
+                                    <div class="title-left">
+                                        <h3>Seu Pedido</h3>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="font-weight-bold">Produto</div>
+                                        <div class="ml-auto font-weight-bold">Total</div>
+                                    </div>
+                                    <hr class="my-1">
+                                    <div class="d-flex">
+                                        <h4>Subtotal</h4>
+                                        <div class="ml-auto font-weight-bold"> R$ 440 </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <h4>Desconto</h4>
+                                        <div class="ml-auto font-weight-bold"> R$ 40 </div>
+                                    </div>
+                                    <hr class="my-1">
+                                    <div class="d-flex">
+                                        <h4>Cupom de Desconto</h4>
+                                        <div class="ml-auto font-weight-bold"> R$ 10 </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <h4>Imposto</h4>
+                                        <div class="ml-auto font-weight-bold"> R$ 2 </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <h4>Frete</h4>
+                                        <div class="ml-auto font-weight-bold"> De Graça </div>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex gr-total">
+                                        <h5>Total</h5>
+                                        <div class="ml-auto h5"> R$ 388 </div>
+                                    </div>
+                                    <hr>
                                 </div>
-                                <hr class="my-1">
-                                <div class="d-flex">
-                                    <h4>Subtotal</h4>
-                                    <div class="ml-auto font-weight-bold"> R$ 440 </div>
-                                </div>
-                                <div class="d-flex">
-                                    <h4>Desconto</h4>
-                                    <div class="ml-auto font-weight-bold"> R$ 40 </div>
-                                </div>
-                                <hr class="my-1">
-                                <div class="d-flex">
-                                    <h4>Cupom de Desconto</h4>
-                                    <div class="ml-auto font-weight-bold"> R$ 10 </div>
-                                </div>
-                                <div class="d-flex">
-                                    <h4>Imposto</h4>
-                                    <div class="ml-auto font-weight-bold"> R$ 2 </div>
-                                </div>
-                                <div class="d-flex">
-                                    <h4>Frete</h4>
-                                    <div class="ml-auto font-weight-bold"> De Graça </div>
-                                </div>
-                                <hr>
-                                <div class="d-flex gr-total">
-                                    <h5>Total</h5>
-                                    <div class="ml-auto h5"> R$ 388 </div>
-                                </div>
-                                <hr> </div>
-                        </div>
-                        <div class="col-12 d-flex shopping-box"> <a href="index.html" class="ml-auto btn hvr-hover">Fazer Pedido</a> </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- End Cart -->
-
-   <!-- Start Instagram Feed  -->
-   <div class="instagram-box">
-    <div class="main-instagram owl-carousel owl-theme">
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/17553681_263966870681086_7591565207671725375_n.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/mandala.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/mandala2.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="images/sketch.jpg" alt="" />
-                <div class="hov-in">
-                    <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-</div>
-</div>
-<!-- End Instagram Feed  -->
-
-     <!-- Start Footer  -->
-     <footer>
-        <div class="footer-main">
-            <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Horário de Atendimento</h3>
-							<ul class="list-time">
-								<li>Segunda - Sexta: Horário Comercial</li> <li>Sabádo: 10.00am até 08.00pm</li> <li>Domingo: <span>Não Atendemos</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Notícias</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="Seu Endereço de Email*" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button class="btn hvr-hover" type="submit">Enviar</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Redes Sociais</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<ul>
-                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-widget">
-                            <h4>Sobre MaréLuna</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                            </div>
+                            <div class="col-12 d-flex shopping-box"> <a href="index.html"
+                                    class="ml-auto btn hvr-hover">Fazer Pedido</a> </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link">
-                            <h4>Informação</h4>
-                            <ul>
-                                <li><a href="#">Sobre Nós</a></li>
-                                <li><a href="#">Atendimento ao Cliente</a></li>
-                                <li><a href="#">Mapa do Site</a></li>
-                                <li><a href="#">Termos &amp; Condições</a></li>
-                                <li><a href="#">Política de Privacidade</a></li>
-                                <li><a href="#">Entrega de Informação</a></li>
-                            </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Cart -->
+
+        <!-- Start Instagram Feed  -->
+        <div class="instagram-box">
+            <div class="main-instagram owl-carousel owl-theme">
+                <div class="item">
+                    <div class="ins-inner-box">
+                        <img src="images/17553681_263966870681086_7591565207671725375_n.jpg" alt="" />
+                        <div class="hov-in">
+                            <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Endereço: Ismael de Araújo 3756 <br>João Cléber é Massa Demais,<br> SP </p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-phone-square"></i>Telefone: <a href="tel:+1-888705770">+55 (16) 33223366</a></p>
-                                </li> 
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">julialinda@gmail.com</a></p>
-                                </li>
-                            </ul>
+                </div>
+                <div class="item">
+                    <div class="ins-inner-box">
+                        <img src="images/mandala.jpg" alt="" />
+                        <div class="hov-in">
+                            <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ins-inner-box">
+                        <img src="images/mandala2.jpg" alt="" />
+                        <div class="hov-in">
+                            <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ins-inner-box">
+                        <img src="images/sketch.jpg" alt="" />
+                        <div class="hov-in">
+                            <a href="https://www.instagram.com/mar.e.luna/?hl=pt-br"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End Footer  -->
+        <!-- End Instagram Feed  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+        <!-- Start Footer  -->
+        <footer>
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Horário de Atendimento</h3>
+                                <ul class="list-time">
+                                    <li>Segunda - Sexta: Horário Comercial</li>
+                                    <li>Sabádo: 10.00am até 08.00pm</li>
+                                    <li>Domingo: <span>Não Atendemos</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Notícias</h3>
+                                <form class="newsletter-box">
+                                    <div class="form-group">
+                                        <input class="" type="email" name="Email"
+                                            placeholder="Seu Endereço de Email*" />
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <button class="btn hvr-hover" type="submit">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-top-box">
+                                <h3>Redes Sociais</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-widget">
+                                <h4>Sobre MaréLuna</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-link">
+                                <h4>Informação</h4>
+                                <ul>
+                                    <li><a href="#">Sobre Nós</a></li>
+                                    <li><a href="#">Atendimento ao Cliente</a></li>
+                                    <li><a href="#">Mapa do Site</a></li>
+                                    <li><a href="#">Termos &amp; Condições</a></li>
+                                    <li><a href="#">Política de Privacidade</a></li>
+                                    <li><a href="#">Entrega de Informação</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-link-contact">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                    <li>
+                                        <p><i class="fas fa-map-marker-alt"></i>Endereço: Ismael de Araújo 3756 <br>João
+                                            Cléber é Massa Demais,<br> SP </p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-phone-square"></i>Telefone: <a href="tel:+1-888705770">+55
+                                                (16) 33223366</a></p>
+                                    </li>
+                                    <li>
+                                        <p><i class="fas fa-envelope"></i>Email: <a
+                                                href="mailto:contactinfo@gmail.com">julialinda@gmail.com</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer  -->
 
-    <!-- ALL JS FILES -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/jquery.superslides.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/inewsticker.js"></script>
-    <script src="js/bootsnav.js."></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/validacao.js"></script>
+        <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+        <!-- ALL JS FILES -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- ALL PLUGINS -->
+        <script src="js/jquery.superslides.min.js"></script>
+        <script src="js/bootstrap-select.js"></script>
+        <script src="js/inewsticker.js"></script>
+        <script src="js/bootsnav.js."></script>
+        <script src="js/images-loded.min.js"></script>
+        <script src="js/isotope.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/baguetteBox.min.js"></script>
+        <script src="js/form-validator.min.js"></script>
+        <script src="js/contact-form-script.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/validacao.js"></script>
 </body>
 
 </html>
